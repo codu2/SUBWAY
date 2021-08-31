@@ -1,2 +1,2 @@
-# SUBWAY-
+# SUBWAY
 Subway Website(ko)
