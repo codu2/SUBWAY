@@ -1,0 +1,275 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nanum Gothic", sans-serif;
+  background: #fff;
+  color: hsl(209, 61%, 16%);
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: hsl(209, 61%, 16%);
+}
+
+.logo {
+  width: auto;
+  height: 100px;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  max-width: 1166px;
+  margin: 0 auto;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 100px;
+  z-index: 999;
+  background: #fff;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+header ul {
+  display: flex;
+}
+
+header ul li {
+  margin: 0 30px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+
+header ul li i {
+  margin-right: 10px;
+  display: none;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.icons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.icons i {
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+header ul.show-menu {
+  left: 0;
+}
+
+.banner {
+  width: 100%;
+  height: 100vh;
+}
+
+.banner-container {
+  padding-top: 100px;
+  width: 100%;
+  height: 100%;
+}
+
+.menu {
+  padding-top: 140px;
+  margin-bottom: 3rem;
+}
+
+.menu .title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.menu .title h2 {
+  text-transform: capitalize;
+  margin-bottom: 0.75rem;
+  font-weight: 900;
+  letter-spacing: 0.1rem;
+  font-size: 2rem;
+}
+
+.underline {
+  width: 20rem;
+  height: 0.25rem;
+  background: #ffcb0a;
+  margin: 0 auto;
+}
+
+.btn-container {
+  margin-bottom: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+.sub-btn-container {
+  margin-bottom: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+.filter-btn {
+  background: transparent;
+  border: none;
+  font-size: 1rem;
+  margin: 0 0.5rem;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: all 0.2s linear;
+}
+
+.sub-btn {
+  background: transparent;
+  border: none;
+  font-size: 0.9rem;
+  margin: 0 1rem;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: all 0.2s linear;
+}
+
+.sub-btn.current {
+  color: #009743;
+}
+
+.filter-btn:hover,
+.sub-btn:hover {
+  color: #009743;
+}
+
+.section-center {
+  width: 90vw;
+  margin: auto;
+  display: grid;
+  gap: 3rem 2rem;
+  justify-items: center;
+}
+
+.menu-item {
+  display: grid;
+  gap: 1rem 2rem;
+  max-width: 25rem;
+  justify-items: center;
+}
+
+.photo {
+  object-fit: cover;
+  height: 180px;
+  width: auto;
+}
+
+.item-info {
+  min-width: 400px;
+}
+
+.item-info .item-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.item-info .item-title h4 {
+  font-weight: 800;
+  letter-spacing: 0.1rem;
+  font-size: 1.1rem;
+}
+
+.item-info .item-title .calories {
+  font-size: 0.9rem;
+  color: #009743;
+}
+
+.item-text {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+@media screen and (max-width: 1166px) {
+  header {
+    height: 100px;
+    padding: 20px 50px;
+  }
+
+  header ul {
+    position: fixed;
+    width: 70%;
+    max-width: 350px;
+    height: 100vh;
+    top: 100px;
+    left: -120%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.5rem;
+    background: #fff;
+    padding: 3rem;
+    border: 0.1rem solid rgba(0, 0, 0, 0.1);
+    transition: 0.4s;
+  }
+
+  header ul li {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+
+  header ul li i {
+    margin-right: 5px;
+    display: inline-block;
+  }
+
+  .menu-toggle {
+    display: inline-block;
+  }
+
+  header .logo {
+    height: 100px;
+  }
+
+  .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media screen and (min-width: 890px) {
+  .section-center {
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+  }
+
+  .photo {
+    height: 150px;
+  }
+}
