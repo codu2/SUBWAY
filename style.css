@@ -170,9 +170,9 @@ header ul.show-menu {
 
 .section-center {
   width: 90vw;
-  margin: auto;
+  margin: 0 auto;
   display: grid;
-  gap: 3rem 2rem;
+  gap: 3rem 3rem;
   justify-items: center;
 }
 
@@ -264,9 +264,16 @@ header ul.show-menu {
 }
 
 @media screen and (min-width: 890px) {
+  .menu {
+    width: 100vw;
+    padding: 0 100px;
+  }
+
   .section-center {
+    width: 100%;
     grid-template-columns: repeat(2, 1fr);
     justify-content: center;
+    padding: 3rem 1rem;
   }
 
   .photo {
