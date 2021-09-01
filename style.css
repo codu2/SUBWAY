@@ -266,7 +266,7 @@ header ul.show-menu {
 @media screen and (min-width: 890px) {
   .menu {
     width: 100vw;
-    padding: 0 100px;
+    padding: 140px 100px 0 100px;
   }
 
   .section-center {
