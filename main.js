@@ -188,7 +188,7 @@ const menu = [
     },
 ];
 
-const sectionCenter = document.querySelector('.section-center');
+const sectionCenter = document.querySelector('.menu-center');
 const subBtnContainer = document.querySelector('.sub-btn-container');
 const menu_Item = document.querySelectorAll('.menu-item');
 
@@ -257,8 +257,7 @@ function displayMenuButtons() {
                 displayMenuItems(menuCategory); // sub가, 즉 data-id의 값이 "all"이 아닌 "breakfast"나 "lunch", "shakes"라면 
             }                                   // displayMenuItems() 함수의 인자로 menuCategory를 넣어 해당 data-id의 값, 즉 sub에 해당하는 menuItem만 표시하도록 함
         
-            const id = e.currentTarget.dataset.id;
-            if(id) {
+            if(sub) {
                 subBtns.forEach(function(b) {
                     b.classList.remove('current');
                 });
@@ -266,10 +265,35 @@ function displayMenuButtons() {
                 menu_Item.forEach(function(c) {
                     c.classList.remove('current');
                 });
-                const element = document.getElementById(id);
-                element.classList.add('current');
+                const element = document.getElementById(sub);
+                element.classList.add("current");
             }
         });
     });
 }
+
+const about = document.querySelector('.about');
+const tabs = document.querySelectorAll('.tab-btn');
+const contents = document.querySelectorAll('.content');
+const aboutImg = document.querySelector('#about_img');
+
+about.addEventListener('click', e => {
+    const id = e.target.dataset.id;
+    const index = e.target.dataset.index;
+    if(id) {
+        tabs.forEach(function(btn) {
+            btn.classList.remove('active');
+        });
+        e.target.classList.add('active');
+        contents.forEach(function(content) {
+            content.classList.remove('active');
+        });
+        const element = document.getElementById(id);
+        element.classList.add("active");
+    }
+    if(index) {
+        aboutImg.src = `https://www.subway.co.kr/images/utilization/img_sandwich0${index}.png`;
+    }
+});
+
 
