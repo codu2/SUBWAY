@@ -548,6 +548,159 @@ header ul.show-menu {
   margin-top: 3rem;
 }
 
+.login {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #f0f0f0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+}
+
+.login.show-login {
+  opacity: 1;
+}
+
+.login-container {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%);
+  width: 70%;
+  min-width: 440px;
+  height: 70vh;
+  background: #fff;
+  border-top-left-radius: 20%;
+  border-bottom-right-radius: 20%;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  /*
+  justify-content: space-between;*/
+}
+
+.login-title {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.login-title h2 {
+  font-size: 40px;
+  line-height: 40px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: -0.2rem;
+  margin-bottom: 0.8rem;
+}
+
+.login-title p {
+  font-size: 0.9rem;
+  line-height: 26px;
+  color: #999;
+  padding: 0 10px;
+  word-break: keep-all;
+  letter-spacing: -0.05rem;
+}
+
+.login-form {
+  margin: 3rem auto;
+}
+
+.login-form p {
+  display: flex;
+  width: 350px;
+  justify-content: flex-start;
+  align-items: center;
+  border: 0.05rem solid #009743;
+}
+
+.login-form p:nth-child(2) {
+  border-top: none;
+}
+
+.login-form p i {
+  font-size: 1.1rem;
+  margin: 0 10px;
+}
+
+.login-form p input {
+  border: none;
+  outline: none;
+  width: 450px;
+  height: 70px;
+  padding: 5px 10px;
+  overflow: hidden;
+}
+
+.login-footer {
+  text-align: center;
+}
+
+.login-footer button {
+  width: 350px;
+  height: 50px;
+  border: none;
+  color: #fff;
+  background: #009743;
+  font-size: 1rem;
+  font-weight: 800;
+  padding: 0.5rem 0;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+  transition: transform 80ms ease-in-out;
+}
+
+.login-footer button:active {
+  transform: scale(0.98);
+}
+
+.login-footer .find {
+  display: flex;
+  width: 320px;
+  justify-content: space-evenly;
+  margin: 0 auto;
+}
+
+.login-footer .find span {
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.login-footer .find span:hover {
+  color: #009743;
+}
+
+.login-close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.login-close i {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.login-close i:hover {
+  color: #009743;
+}
+
+.scroll-up {
+  position: fixed;
+  bottom: 30px;
+  right: 10px;
+}
+
+.scroll-up .scroll-top {
+  font-size: 3rem;
+  background: #ffcb0a;
+  color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: opacity 0.3s ease-in;
+}
+
 @media screen and (max-width: 768px) {
   .content ul {
     display: flex;
