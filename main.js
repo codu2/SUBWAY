@@ -296,4 +296,28 @@ about.addEventListener('click', e => {
     }
 });
 
+const loginBtn = document.getElementById('login-btn');
+const loginForm = document.querySelector('.login');
+const loginCloseBtn = document.getElementById('login-close');
+const scrollBtn = document.querySelector('.scroll-top');
 
+
+loginBtn.addEventListener('click', () => {
+    loginForm.classList.toggle('show-login');
+})
+
+loginCloseBtn.addEventListener('click', () => {
+    loginForm.classList.remove('show-login');
+})
+
+window.addEventListener('scroll', () => {
+    if(window.scrollY > 2000) {
+        scrollBtn.style.opacity = "1";
+    } else {
+        scrollBtn.style.opacity = "0";
+    }
+});
+
+scrollBtn.addEventListener('click', () => {
+    document.documentElement.scrollTop = "0";
+});
