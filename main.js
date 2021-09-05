@@ -296,9 +296,14 @@ about.addEventListener('click', e => {
     }
 });
 
+
+
 const loginBtn = document.getElementById('login-btn');
+const signUpBtn = document.getElementById('move-sign-up');
 const loginForm = document.querySelector('.login');
+const signUpForm = document.querySelector('.sign-up');
 const loginCloseBtn = document.getElementById('login-close');
+const signUpCloseBtn = document.getElementById('sign-up-close');
 const scrollBtn = document.querySelector('.scroll-top');
 
 
@@ -308,6 +313,15 @@ loginBtn.addEventListener('click', () => {
 
 loginCloseBtn.addEventListener('click', () => {
     loginForm.classList.remove('show-login');
+})
+
+signUpBtn.addEventListener('click', () => {
+    signUpForm.classList.add('show-sign-up');
+    loginForm.classList.remove('show-login');
+})
+
+signUpCloseBtn.addEventListener('click', () => {
+    signUpForm.classList.remove('show-sign-up');
 })
 
 window.addEventListener('scroll', () => {
@@ -321,3 +335,72 @@ window.addEventListener('scroll', () => {
 scrollBtn.addEventListener('click', () => {
     document.documentElement.scrollTop = "0";
 });
+
+const page = document.querySelectorAll('.page');
+const signUp = document.querySelector('.sign-up-form form');
+const nextBtn = document.querySelectorAll('.next');
+const previousBtn = document.querySelectorAll('.previous');
+
+nextBtn.forEach(e => {
+    e.addEventListener('click', () => {
+        signUp.style.transform += "translateX(-25%)";
+
+    })
+})
+
+previousBtn.forEach(e => {
+    e.addEventListener('click', () => {
+        signUp.style.transform += "translateX(25%)";
+    })
+})
+
+/*
+const birth = document.querySelector('#birth');
+const tel = document.querySelector('#tel');
+const emailId = document.querySelector('#email-id');
+const infoBirth = document.querySelector('.info-birth');
+const infoPhone = document.querySelector('.info-phone');
+const infoEmail = document.querySelector('.info-email');
+
+function showInfo() {
+    const birth = document.querySelector('#birth');
+    const tel = document.querySelector('#tel');
+    const emailId = document.querySelector('#email-id');
+
+    const signUpInfo = document.querySelector('.sign-up-info');
+
+    signUpInfo.innerHTML = `<div class="info-birth">${birth.value}</div>
+                        <div class="info-phone">${tel.value}</div>
+                        <div class="info-email">${emailId.value}</div>`;
+
+}
+
+showInfo();
+*/
+
+const pages = document.querySelectorAll('.page');
+const steps = document.querySelectorAll('.step'); 
+const submitBtn = document.querySelector('.sign-up-clear');
+const bullets = document.querySelectorAll('.bullet');
+
+const max_steps = 4;
+let currentStep = 1;
+
+nextBtn.forEach(e => {
+    e.addEventListener('click', () => {
+        bullets[currentStep - 1].classList.add('completed');
+        currentStep += 1;
+    })
+})
+
+
+previousBtn.forEach(e => {
+    e.addEventListener('click', () => {
+    bullets[currentStep - 2].classList.remove('completed');
+    currentStep -= 1;
+    })
+})
+
+submitBtn.addEventListener('click', () => {
+    location.reload();
+})
