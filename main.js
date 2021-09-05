@@ -1,9 +1,16 @@
 const toggle = document.querySelector('.menu-toggle');
 const nav = document.querySelector('.nav ul');
+const menus = document.querySelectorAll('.nav ul li');
 
 toggle.addEventListener('click', () => {
     nav.classList.toggle('show-menu');
 });
+
+menus.forEach(function(menu) {
+    menu.addEventListener('click', () => {
+        nav.classList.remove('show-menu');
+    })
+})
 
 const menu = [
     {
@@ -404,3 +411,19 @@ previousBtn.forEach(e => {
 submitBtn.addEventListener('click', () => {
     location.reload();
 })
+
+const questions = document.querySelectorAll('.question');
+
+questions.forEach(function (question) {
+    const btn = question.querySelector('.question-btn');
+
+    btn.addEventListener('click', () => {
+        questions.forEach(function (item) {
+            if (item !== question) {
+                item.classList.remove('show-text');
+            }
+        })
+
+        question.classList.toggle('show-text');
+    });
+});
