@@ -324,6 +324,162 @@
         </section>
         </section>
     </div>
+     <div class="login">
+        <div class="login-container">
+            <div class="login-close">
+                <i class="ri-close-line" id="login-close"></i>
+            </div>
+            <div class="login-title">
+                <h2>login</h2>
+                <p>써브웨이 회원으로 로그인하시면 제공하는 다양한 서비스를 이용할 수 있습니다.</p>
+            </div>
+            <div class="login-form">
+                <p>
+                    <i class="ri-mail-line"></i>
+                    <input type="email" placeholder="이메일 아이디 입력" class="email">
+                </p>
+                <p>
+                    <i class="ri-lock-line"></i>
+                    <input type="password" placeholder="비밀번호 입력">
+                </p>
+            </div>
+            <div class="login-footer">
+                <button type="submit" class="submit">
+                    로그인
+                </button>
+                <div class="find">
+                    <span>아이디 찾기</span>
+                    <span>비밀번호 찾기</span>
+                    <span id="move-sign-up">회원가입</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sign-up">
+        <div class="sign-up-container">
+            <div class="sign-up-close">
+                <i class="ri-close-line" id="sign-up-close"></i>
+            </div>
+            <div class="sign-up-title">
+                <h2>sign up</h2>
+            </div>
+            <div class="progress-bar">
+                <div class="step">
+                    <p>기본 정보</p>
+                    <div class="bullet">
+                        <span><i class="ri-user-line"></i></span>
+                        <div class="check ri-check-line"></div>
+                    </div>
+                </div>
+                <div class="step">
+                    <p>필수 정보</p>
+                    <div class="bullet">
+                        <span><i class="ri-lock-2-line"></i></span>
+                        <div class="check ri-check-line"></div>
+                    </div>
+                </div>
+                <div class="step">
+                    <p>결제 정보</p>
+                    <div class="bullet">
+                        <span><i class="ri-bank-card-line"></i></span>
+                        <div class="check ri-check-line"></div>
+                    </div>
+                </div>
+                <div class="step">
+                    <p>가입 완료</p>
+                    <div class="bullet">
+                        <span><i class="ri-check-double-line"></i></span>
+                        <div class="check ri-check-line"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="sign-up-form">
+                <form action="#">
+                    <div class="page">
+                        <div class="page-content">
+                            <input type="text" id="name" autocomplete="off">
+                            <label for="" class="label">이름</label>
+                        </div>
+                        <div class="page-content">
+                            <input type="tel" id="tel" autocomplete="off" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}"
+                            required>
+                            <label for="" class="label">휴대폰 번호</label>
+                        </div>
+                        <div class="page-content">
+                            <input type="text" id="birth" autocomplete="off">
+                            <label for="" class="label">생년월일</label>
+                        </div>
+                        <input type="button" name="next" class="next action-button" value="다음" />
+                    </div>
+                    <div class="page">
+                        <div class="page-content">
+                            <input type="email" id="email-id" autocomplete="off" required>
+                            <label for="" class="label">이메일</label>
+                        </div>
+                        <div class="page-content">
+                            <input type="password" id="password" minlength="8" required>
+                            <label for="" class="label">비밀번호</label>
+                        </div>
+                        <div class="page-content">
+                            <input type="password" id="password-check" pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,16}$" required>
+                            <label for="" class="label">비밀번호 확인</label>
+                        </div>
+                        <div class="sign-up-btn">
+                            <input type="button" name="previous" class="previous action-button-previous" value="이전" /> 
+                            <input type="button" name="next" class="next action-button" value="다음" />
+                        </div>
+                    </div>
+                    <div class="page">
+                        <div class="page-content page-grid">
+                            <p>결제카드</p>
+                            <div class="payment-container">
+                                <div class="master">
+                                    <p>MasterCard</p>
+                                    <img src="/mastercard.png" alt="">
+                                </div>
+                                <div class="visa">
+                                    <p>VISA</p>
+                                    <img src="/visa.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="page-content payment">
+                            <input type="text" inputmode="numeric" autocomplete="off" placeholder="xxxx xxxx xxxx xxxx" pattern="[0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4}">
+                            <label for="" class="label">카드 번호</label>
+                        </div>
+                        <div class="page-content payment">
+                            <input type="text" placeholder="MM/YY" autocomplete="off" pattern="[0~9]{2}/[0~9]{2}">
+                            <label for="" class="label">유효기간</label>
+                        </div>
+                        <div class="page-content">
+                            <input type="text" autocomplete="off" pattern="^[0-9]+$">
+                            <label for="" class="label">CVC</label>
+                        </div>
+                        <div class="sign-up-btn">
+                            <input type="button" name="previous" class="previous action-button-previous" value="이전" /> 
+                            <input type="button" name="next" class="next action-button" value="다음" />
+                        </div>
+                    </div>
+                    <div class="page">
+                        <div class="clear">
+                            <span>web</span>님
+                            <p>써브웨이에 오신걸 환영합니다!</p>
+                            <div class="sign-up-info">
+                                
+                            </div>
+                            <p>위 정보가 고객님의 정보와 일치한다면 버튼을 눌러주세요.</p>
+                        </div>
+                        <div class="sign-up-btn">
+                            <input type="button" name="previous" class="previous action-button-previous" value="이전" /> 
+                            <button class="sign-up-clear">회원가입</button>
+                        </div>
+                    </div>
+                </form>
+               <div class="field"></div>
+            </div>
+            
+        </div>
+    </div>
     <div class="scroll-up">
         <i class="ri-arrow-drop-up-line scroll-top"></i>
     </div>
